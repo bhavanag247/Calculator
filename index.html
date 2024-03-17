@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Calculator
+</title>
+<style>
+h1{
+  text-align: center;
+  color: white;
+background-image: linear-gradient(to right, red, blue)
+}
+footer{
+  text-align: center;
+  height: 1.5em;
+  color: white;
+  background-image: linear-gradient(to right, red, purple, blue);
+}
+</style>
+</head>
+<body>
+  <h1>Calculator</h1>
+  <section>
+  <h2>Addition</h2>
+  <p></p><label>First Number: </label><input type=number id=fnadd></p>
+  <p></p><label>Second Number: </label><input type=number id=snadd></p>
+  <button onclick="addition()">Calculate</button>
+  <h2>Subtraction</h2>
+  <p></p><label>First Number: </label><input type=number id=fnsub></p>
+  <p></p><label>Second Number: </label><input type=number id=snsub></p>
+  <button onclick="subtraction()">Calculate</button>
+<h2>Multiplication</h2>
+  <p></p><label>First Number: </label><input type=number id=fnmul></p>
+  <p></p><label>Second Number: </label><input type=number id=snmul></p>
+  <button onclick="multiplication()">Calculate</button>
+<h2>Division</h2>
+  <p></p><label>First Number: </label><input type=number id=fndiv></p>
+  <p></p><label>Second Number: </label><input type=number id=sndiv></p>
+  <button onclick="division()">Calculate</button>
+  </section>
+  <br>
+  <script>
+  function addition(){
+    var fnadd = parseFloat(document.getElementById('fnadd').value);
+    var snadd = parseFloat(document.getElementById('snadd').value);
+    var sum = fnadd + snadd;
+    document.write("Sum: ", sum)
+    }
+    function multiplication(){
+    var fnmul = parseFloat(document.getElementById('fnmul').value);
+    var snmul = parseFloat(document.getElementById('snmul').value);
+    var product = fnmul * snmul;
+    document.write("Product: ", product)
+    }
+  function subtraction(){
+    var fnsub = parseFloat(document.getElementById('fnsub').value);
+    var snsub = parseFloat(document.getElementById('snsub').value);
+    var difference = fnsub - snsub;
+    document.write("Difference: ", difference)
+    }
+   function division(){
+    var fndiv = parseFloat(document.getElementById('fndiv').value);
+    var sndiv = parseFloat(document.getElementById('sndiv').value);
+    var qoutient = fndiv / sndiv;
+    document.write("Qoutient: ", qoutient)
+    }
+  </script>
+  <footer>Designed by Goutham R Gowda
+  </footer>
+</body>
+</html>
